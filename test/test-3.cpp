@@ -6,3 +6,6 @@ TEST_CASE("Test Password Generator") {
     CHECK((test.length() == 9));
 }
 
+TEST_CASE("Test write raw.txt") {
+    PassGen::writeRaw();
+}
