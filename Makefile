@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -g -std=c++11 -Wall -Werror=return-type  -Werror=uninitialized 
+CXXFLAGS = -g -std=c++17 -Wall -Werror=return-type  -Werror=uninitialized 
 
 SRCS = $(wildcard *.hpp)
 OBJECTS = $(SRCS:%.hpp=%.o)
@@ -29,6 +29,6 @@ test-2-vin: test/test-2-vin.cpp vigenere.o $(CATCH)
 	$(CXX) $(CXXFLAGS) -o test/$@ $^
 	test/$@ --success
 
-test-3: test/test-3.cpp passgen.o $(CATCH)
+test-3: test/test-3.cpp passgen.o vigenere.o $(CATCH)
 	$(CXX) $(CXXFLAGS) -o test/$@ $^
 	test/$@ --success

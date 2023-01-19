@@ -5,6 +5,7 @@
 class User {
     private:
         std::string name, pass;
+        User* next;
     public:
         User();
         User(std::string);
@@ -13,6 +14,8 @@ class User {
         void setUser(std::string);
         std::string getPass();
         void setPass(std::string);
+        void setNext(User*);
+        User* getNext();
 };
 
 #endif

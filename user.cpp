@@ -4,11 +4,13 @@
 User::User() {
     name = "";
     pass = "";
+    next = nullptr;
 }
 
 User::User(std::string name) {
     this->name = name;
     pass = "";
+    next = nullptr
 }
 
 std::string User::getUser() {
@@ -25,4 +27,12 @@ std::string User::getPass() {
 
 void User::setPass(std::string pass) {
     this->pass = pass;
+}
+
+void User::setNext(User* next) {
+    this->next = next;
+}
+
+User* User::hasNext() {
+    return next;
 }

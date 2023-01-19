@@ -7,9 +7,9 @@
 class PassGen {
     public:
         static void writeRaw();
-        static void writeEncrypted();
+        static void writeEncrypted(std::string);
 
-        static std::string getRandomPass();
+        static std::string getRandomPass(int);
 };
 
 #endif

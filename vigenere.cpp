@@ -2,7 +2,6 @@
 #include <iostream>
 
 std::string Vigenere::Encrypt(std::string key, std::string data) {
-    std::string toSwap;
     for(int i = 0; i < data.size(); i++) {
         int map = (key[i % key.size()] - 97) + data[i];
 
