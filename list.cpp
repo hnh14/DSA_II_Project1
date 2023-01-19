@@ -6,21 +6,24 @@ List::List() {
 }
 
 void List::Push(User* toPush) {
-    if(head == nullptr)
+    if(head == nullptr) {
         head = toPush;
+    }
 
-    toPush->setNext(head);
-    head = toPush;
+    else {
+        toPush->setNext(head);
+        head = toPush;
+    }
 }
 
 std::string List::findHash(std::string name) {
     if(name == head->getUser())
         return head->getPass();
 
-    if(!head->getNext() == nullptr)
+    if(head->getNext() == nullptr)
         return "-1";
     
-    findHash(name, head->getNext());
+    return findHash(name, head->getNext());
 }
 
 std::string List::findHash(std::string name, User* user) {
@@ -30,5 +33,5 @@ std::string List::findHash(std::string name, User* user) {
     if(user->getNext() == nullptr)
         return "-1";
     
-    findHash(name, user->getNext());
+    return findHash(name, user->getNext());
 }

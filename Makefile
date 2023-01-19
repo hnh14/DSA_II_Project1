@@ -32,3 +32,7 @@ test-2-vin: test/test-2-vin.cpp vigenere.o $(CATCH)
 test-3: test/test-3.cpp passgen.o vigenere.o $(CATCH)
 	$(CXX) $(CXXFLAGS) -o test/$@ $^
 	test/$@ --success
+
+test-4: test/test-4.cpp user.o list.o $(CATCH)
+	$(CXX) $(CXXFLAGS) -o test/$@ $^
+	test/$@ --success

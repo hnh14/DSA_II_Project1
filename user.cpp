@@ -10,7 +10,7 @@ User::User() {
 User::User(std::string name) {
     this->name = name;
     pass = "";
-    next = nullptr
+    next = nullptr;
 }
 
 std::string User::getUser() {
@@ -33,6 +33,6 @@ void User::setNext(User* next) {
     this->next = next;
 }
 
-User* User::hasNext() {
+User* User::getNext() {
     return next;
 }
