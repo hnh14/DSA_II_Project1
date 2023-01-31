@@ -36,3 +36,7 @@ test-3: test/test-3.cpp passgen.o vigenere.o $(CATCH)
 test-4: test/test-4.cpp user.o list.o $(CATCH)
 	$(CXX) $(CXXFLAGS) -o test/$@ $^
 	test/$@ --success
+
+test-5: test/test-5.cpp hashtable.o list.o user.o vigenere.o $(CATCH)
+	$(CXX) $(CXXFLAGS) -o test/$@ $^
+	test/$@ --success

@@ -4,6 +4,7 @@
 #include <time.h>
 #include <functional>
 
+// Reads lastNames.txt and writes Usernames and random passwords to raw.txt
 void PassGen::writeRaw() {
     std::string data = "";
     std::string temp;
@@ -36,6 +37,7 @@ void PassGen::writeRaw() {
     outputFile.close();
 }
 
+// Reads raw.txt and writes Usernames and encrypted passwords to encrypted.txt
 void PassGen::writeEncrypted(std::string key) {
     std::string data = "";
     std::string user, pass;
@@ -69,6 +71,7 @@ void PassGen::writeEncrypted(std::string key) {
     outputFile.close();
 }
 
+// Accepts seed and generates random 9 character password
 std::string PassGen::getRandomPass(int seed) {
     std::string pass = "";
     srand(time(NULL) * seed);
