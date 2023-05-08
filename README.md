@@ -1,6 +1,10 @@
 # Data Structures and Algorithms II
 User's Manual - Project I
 
+This project creates an externally chained hash table to efficiently store and lookup userids and passwords. The program starts by generating a randomized password for each last name listed in "lastNames.txt". It then writes two seperate files conataining the user ids and passwords. One is encrypted, the other is not. The passwords are encrypted using a Vigenere Cipher. The program then stores the encyrypted passwords in the hash table. Finally the program will check that the encrypted passwords can be searched using only the userids.
+
+The Hash Table can insert and search in O(n) time
+
 Setup and Compilation
 1. Download and unzip the submission from eLearning on a Linux box in the multi-platform lab.
 2. The submission includes:
